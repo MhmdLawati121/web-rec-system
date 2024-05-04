@@ -1,0 +1,219 @@
+:root {
+  --squ-blue: #150d60;
+  --squ-gold:  #eca400;
+  --error-red: #FFCCCC;
+  --success-green: #8dcd8d;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inria Sans", sans-serif;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.5;
+  background-color: #fffbfb;
+}
+
+/* Navigation */
+.custom-navbar {
+  background-color: var(--squ-blue);
+  margin-bottom: 27px;
+}
+
+.custom-nav-item .nav-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.custom-nav-item .nav-item a:hover {
+  text-decoration: none;
+  color: white;
+  opacity: 75%;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: white;
+}
+
+
+
+.custom-footer {
+  margin-top: 25px;
+  padding: 15px 45px 15px 45px;
+  background-color: var(--squ-blue);
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+/* Button + Toggler */
+.custom-btn:hover {
+  opacity: 90%;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:%23eca400}</style><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>');
+}
+
+/* Wrappers */
+.container {
+  padding: 10px;
+  /* border: solid 2px #150D60; */
+}
+
+.main-content h1 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px var(--squ-gold);
+}
+
+.main-content h2 {
+  padding-bottom: 10px;
+  font-size: 30px;
+}
+
+.custom-card {
+  padding: 12px;
+  border: solid 1px var(--squ-blue);
+  margin-bottom: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-card:hover {
+  transform: scale(1.02);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-footer {
+  display: flex;
+  background-color: white;
+  margin: center 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-button {
+  background-color: #eca400;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.custom-button:hover {
+  opacity: 0.92;
+}
+
+.card-header {
+  border: none;
+  background-color: white;
+  padding-bottom: 0;
+}
+
+.card-footer {
+  border: none;
+  padding-top: 0;
+}
+
+.main-content {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+
+.account-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.5vw;
+}
+
+.account-buttons button {
+  width: 6vw;
+}
+
+
+/**************/
+ /* Dropdown Button */
+ .dropbtn {
+  background-color: #eca400;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {opacity: 0.92} 
+
+
+/********************/
+/* Error & Messages */
+/********************/
+
+#error-container p {
+  flex-grow: 1;
+  margin: 0;
+  color: #fe3d21;
+}
+
+.errorActive {
+  background-color: var(--error-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3% 15%;
+  gap: 3%;
+}
+
+#message-container p {
+  flex-grow: 1;
+  margin: 0;
+  color: #4a934a;
+}
+
+.messageActive {
+  background-color: var(--success-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3% 15%;
+  gap: 3%;
+}
+
+.errorInActive {
+  display: none;
+}

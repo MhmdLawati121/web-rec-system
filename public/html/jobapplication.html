@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recruitment System</title>
+    <!-- Add Bootstrap CSS link here -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/jobapplication.css" />
+    <link rel="stylesheet" href="../css/template.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&family=Rubik:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <a class="navbar-brand" href="#">
+        <img
+          class="logo"
+          src="../pictures/SQU_logo.png"
+          alt=""
+          height="50"
+          class="d-inline-block align-text-center"
+        />
+        SQU Careers
+      </a>
+      <button
+        style="border-color: white"
+        class="navbar-toggler custom-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"> </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav custom-nav-item">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About SQU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="location.href='/'">Job Listings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="ml-auto account-buttons">
+          <button
+            type="button"
+            class="btn btn-md custom-btn"
+            style="background-color: #eca400"
+            onclick="location.href = '/login';"
+          >
+            <a style="color: black">login</a>
+          </button>
+          <button
+            type="button"
+            class="btn btn-md custom-btn"
+            style="background-color: #eca400"
+            onclick="location.href = '/registration';"
+          >
+            <a style="color: black">register</a>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="main-content">
+        <form id="jobForm">
+          <h2>Job Application Form</h2>
+
+          <label for="title">Job Title*</label>
+          <input type="text" id="title" name="title" class="required" />
+
+          <label for="college">College*</label>
+          <input type="text" id="college" name="college" class="required" />
+
+          <label for="specialization">Specialization*</label>
+          <input
+            type="text"
+            id="specialization"
+            name="specialization"
+            class="required"
+          />
+
+          <label for="description">Job Description*</label>
+          <textarea
+            id="description"
+            name="description"
+            maxlength="255"
+            class="required"
+          >
+          </textarea>
+
+          <label for="openingDate">Opening Date*</label>
+          <input
+            type="date"
+            id="openingDate"
+            name="openingDate"
+            class="required"
+          />
+
+          <label for="closingDate">Closing Date*</label>
+          <input
+            type="date"
+            id="closingDate"
+            name="closingDate"
+            class="required"
+          />
+
+          <label for="jobCategory">Job Category</label>
+          <select id="jobCategory" name="jobCategory">
+            <option value="Academic">Academic</option>
+            <option value="Non-Academic">Non-Academic</option>
+          </select>
+
+          <label for="jobType">Job Type</label>
+          <select id="jobType" name="jobType">
+            <option value="Full time">Full time</option>
+            <option value="Part time">Part time</option>
+          </select>
+
+          <label for="experience"
+            >Years of Experience* (set 0 if not applicable)</label
+          >
+          <input
+            type="number"
+            id="experience"
+            name="experience"
+            class="required"
+          />
+
+          <label for="qualification">Minimum Academic Qualification</label>
+          <div class="qualificationsSection">
+            <select id="qualificationType" name="qualificationType">
+              <option value="Not-Applicable">Not Applicable</option>
+              <option value="Bachelor">Bachelor</option>
+              <option value="Masters">Masters</option>
+              <option value="PhD">PhD</option>
+              <input
+                type="text"
+                id="qualification"
+                name="qualification"
+                placeholder="Field"
+              />
+            </select>
+          </div>
+
+          <label for="duties">Duties</label>
+          <div class="dutiesSection">
+            <div class="duty sectionPart">
+              <input type="text" class="counter" placeholder="1." disabled />
+              <input type="text" id="duties" name="duties" />
+            </div>
+          </div>
+          <button type="button" id="addDuty">+</button>
+
+          <label for="requirements">Requirements</label>
+          <div class="requirementsSection">
+            <div class="requirement sectionPart">
+              <input type="text" class="counter" placeholder="1." disabled />
+              <input type="text" id="requirements" name="requirements" />
+            </div>
+          </div>
+          <button type="button" id="addRequirement">+</button>
+
+          <label for="certificates">Certificates</label>
+          <div class="certificatesSection">
+            <div class="certificate sectionPart">
+              <input type="text" class="counter" placeholder="1." disabled />
+              <input type="text" id="certificates" name="certificates" />
+            </div>
+          </div>
+          <button type="button" id="addCertificate">+</button>
+
+          <label for="benefits">Benefits</label>
+          <div class="benefitsSection">
+            <div class="benefit sectionPart">
+              <input type="text" class="counter" placeholder="1." disabled />
+              <input type="text" id="benefits" name="benefits" />
+            </div>
+          </div>
+          <button type="button" id="addBenefit">+</button> <br />
+          <br />
+
+          <div id="assessment-btn">
+            <label for="toggle-assessment">Add/remove assessment</label>
+            <button type="button" id="toggle-assessment">Add</button>
+          </div>
+
+          <div class="pageBtns">
+            <div id="action-buttons">
+              <button type="submit">Submit Application</button>
+              <button type="button" class="removeBtn" id="clearButton">
+                Clear Application
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="main-content">
+        <div class="assessment hide">
+          <h2>Assessment</h2>
+          <div id="quiz"></div>
+          <br />
+          <button id="addQuestion">Add Question</button>
+          <button id="removeQuestion">Remove Question</button>
+          <br /><br /><br />
+          <button id="previewAssessment" onclick="previewAssessment()">
+            Preview Assessment
+          </button>
+          <br /><br /><br />
+        </div>
+        <div class="pageBtns hide">
+          <div id="action-buttons">
+            <button type="submit">Submit Application</button>
+            <button type="button" class="removeBtn" id="clearButton">
+              Clear Application
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="custom-footer">
+        <div class="footer-item"><p>@ 2023 SQU Recruitment Sytem</p></div>
+        <div class="footer-item"><p>Terms of Use</p></div>
+      </div>
+    </footer>
+
+    <!-- Add Bootstrap JS and jQuery scripts here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/jobapplication.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        const documentHeight = document.body.clientHeight;
+        const viewportHeight = window.innerHeight;
+
+        if (documentHeight < viewportHeight) {
+          const footer = document.querySelector(".custom-footer");
+          footer.classList.add("footer-at-bottom");
+        }
+      });
+    </script>
+    <script src="../js/logout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
+  </body>
+</html>

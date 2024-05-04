@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Applications</title>
+    <!-- Add Bootstrap CSS link here -->
+    <link rel="stylesheet" href="../css/viewapps.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/template.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&family=Rubik:wght@400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css"
+    />
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <a class="navbar-brand" href="#">
+        <img
+          class="logo"
+          src="../pictures/SQU_logo.png"
+          alt=""
+          height="50"
+          class="d-inline-block align-text-center"
+        />
+        SQU Careers
+      </a>
+      <button
+        style="border-color: white"
+        class="navbar-toggler custom-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"> </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav custom-nav-item">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About SQU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="location.href='/'">Job Listings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="ml-auto account-buttons">
+          <button
+            type="button"
+            class="btn btn-md custom-btn"
+            style="background-color: #eca400"
+            onclick="location.href = '/login';"
+          >
+            <a style="color: black">login</a>
+          </button>
+          <button
+            type="button"
+            class="btn btn-md custom-btn"
+            style="background-color: #eca400"
+            onclick="location.href = '/registration';"
+          >
+            <a style="color: black">register</a>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div id="loading-message-center">
+        <div id="loading-message" class="hideLoading">
+          <p>The scoring is taking place, please do not close the tab.</p>
+          <p>This may take a few minutes...</p>
+        </div>
+      </div>
+      <div class="main-content">
+        <button id="toggle-weights" type="button">Enable Options</button>
+        <div id="options" class="hideOptions">
+          <div class="weight-container">
+            <h3>Customize criteria contribution</h3>
+
+            <form>
+              <div id="set-weights">
+                <label for="skill_weight"
+                  >Skill-to-requirement contribution:
+                </label>
+                <input
+                  type="number"
+                  inputmode="numeric"
+                  name="skill_weight"
+                  id="skill_weight"
+                  placeholder="%"
+                />
+                <label for="employment_weight"
+                  >Employments (Loyalty) contribution:
+                </label>
+                <input
+                  type="number"
+                  name="employment_weight"
+                  placeholder="%"
+                  id="employment_weight"
+                />
+                <label for="qualification_weight"
+                  >Academic qualifications contribution:
+                </label>
+                <input
+                  type="number"
+                  placeholder="%"
+                  name="qualification_weight"
+                  id="qualification_weight"
+                />
+                <label for="experience_weight">Experience contribution: </label>
+                <input
+                  type="number"
+                  name="experience_weight"
+                  placeholder="%"
+                  id="experience_weight"
+                />
+                <label for="quiz_weight">Assessment score contribution: </label>
+                <input
+                  type="number"
+                  name="quiz_weight"
+                  id="quiz_weight"
+                  placeholder="%"
+                />
+                <p>Weight Sum:</p>
+                <p id="weight_sum"></p>
+              </div>
+
+              <div id="score-candidates-div">
+                <button id="score-candidates" type="submit" disabled>
+                  Calculate scores
+                </button>
+              </div>
+            </form>
+          </div>
+          <div id="actions">
+            <p id="selected-count">selected:</p>
+
+            <div id="resume-download-action">
+              <button id="download-btn" onclick="downloadCv()">
+                Download CVs of Selected Applications
+              </button>
+            </div>
+
+            <div id="delegation-action">
+              <label for="show-delagation-form"
+                >Delegate selected applicants to another user</label
+              >
+              <div id="delegation-form" style="display: block">
+                <input
+                  type="email"
+                  name="delegate-to"
+                  id="delegate-to"
+                  placeholder="Enter user email"
+                />
+                <textarea
+                  name="delegate-comment"
+                  id="delegate-comment"
+                  cols="30"
+                  rows="3"
+                  placeholder="task description (optional)"
+                ></textarea>
+                <div id="delegate-button-div">
+                  <button id="delegate-btn">Delegate</button>
+                </div>
+              </div>
+            </div>
+
+            <div id="update-status-action">
+              <select name="status-options" id="status-options">
+                <option value="Accepted">Accepted</option>
+                <option value="Pending">Pending</option>
+                <option value="Rejected">Rejected</option>
+              </select>
+              <button id="update-status-button">
+                Update Status of selected Applications
+              </button>
+            </div>
+
+            <div id="send-status-button">
+              <button id="download-btn" onclick="sendStatusUpdates()">
+                Send Status by Email
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="table-container">
+          <span id="error-message"></span>
+
+          <h1>Applicants</h1>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="custom-footer">
+        <div class="footer-item"><p>@ 2023 SQU Recruitment Sytem</p></div>
+        <div class="footer-item"><p>Terms of Use</p></div>
+      </div>
+    </footer>
+
+    <!-- Add Bootstrap JS and jQuery scripts here -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TableExport/5.2.0/js/tableexport.min.js"></script>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        const documentHeight = document.body.clientHeight;
+        const viewportHeight = window.innerHeight;
+
+        if (documentHeight < viewportHeight) {
+          const footer = document.querySelector(".custom-footer");
+          footer.classList.add("footer-at-bottom");
+        }
+      });
+    </script>
+
+    <script src="../js/viewApps.js"></script>
+    <script src="../js/logout.js"></script>
+  </body>
+</html>

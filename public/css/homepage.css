@@ -1,0 +1,116 @@
+@import url("./template.css");
+
+p {
+  margin: 0;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25px;
+}
+
+.hidden-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: lightgray solid 1px;
+}
+
+.card-body {
+  padding-top: 2px;
+}
+
+.custom-card .card-body.expanded {
+  max-height: 100%; /* Set it to a specific value, such as 100%, to expand to full height */
+}
+
+.custom-card {
+  margin-bottom: 25px;
+  border-radius: 13px;
+}
+
+#filters {
+  margin-right: 22px;
+  width: 40%;
+  overflow: auto;
+  margin-bottom: 15px;
+}
+
+#filters .filter-box {
+  width: 90%;
+  height: fit-content;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+#search-input {
+  width: 100%;
+  border: solid 1px rgb(186, 182, 182);
+  padding: 5px 0px 5px 15px;
+  border-radius: 4px;
+}
+
+#all-cards {
+  width: 80%;
+}
+
+.filter-box select {
+  width: 100%;
+  border: solid 1px rgb(186, 182, 182);
+  padding: 7px 0px 8px 15px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .main-wrapper {
+    flex-direction: column; /* Stack items in a column in mobile view */
+  }
+
+  #all-cards,
+  #filters {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .filter-box {
+    width: 100%;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+}
+
+
+.header-image {
+  background-image: url("../images/SQU\ Careers.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 720px;
+  margin-bottom: 8vh;
+}
+
+.header-image p{
+  margin-right: 5vw;
+  font-size: 8rem;
+  font-weight: lighter;
+  width: min-content;
+}
+
+.navbar {
+  margin: 0;
+}

@@ -1,0 +1,25 @@
+#assessment
+    p {
+    background-color: antiquewhite;
+    padding: 2vh 2vw;
+    margin-top: 5vh;
+}
+
+#assessment ul {
+    list-style: none;
+    width: 100%;
+
+}
+
+#assessment li {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2vh 2vw;
+    gap: 1px;
+    font-size: large;
+}
+
+#assessment input {
+    width: 25px;
+    height: 25px;
+}

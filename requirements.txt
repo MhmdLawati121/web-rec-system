@@ -1,0 +1,6 @@
+Flask
+flask-cors
+psycopg2
+numpy
+spacy
+gensim

@@ -1,0 +1,108 @@
+.edit-academic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.edit-academic input {
+  margin-bottom: 2vh;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 10px;
+}
+
+#actionsDropdown {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+  }
+
+  /* Style for the dropdown options */
+  #actionsDropdown option {
+    padding: 8px;
+  }
+
+  /* Style for the dropdown optgroups */
+  #actionsDropdown optgroup {
+    font-weight: bold;
+  }
+
+  #add-entry form {
+    margin-top: 1rem;
+    border-radius: .7rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #add-entry {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  /* Style for section headers */
+.section-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Style for table container */
+.table-container {
+  margin-top: 10px;
+}
+
+/* Style for tables */
+.section-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+/* Style for table headers */
+.section-table th {
+  background-color: #f2f2f2;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Style for table rows */
+.section-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternate row color */
+.section-table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect for rows */
+.section-table tr:hover {
+  background-color: #ddd;
+}
+
+h3, h2 {
+  margin-top: 7vh;
+}
+
+.radio-flex
+{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.radio-flex label{
+
+  font-weight: 250;
+}
+

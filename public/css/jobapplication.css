@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+form {
+  max-width: 600px;
+  margin: auto;
+}
+label {
+  display: block;
+  margin-top: 10px;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+textarea {
+  height: 100px;
+}
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #45a049;
+}
+
+.removeBtn {
+  background-color: red;
+  width: auto;
+}
+
+.removeBtn:hover {
+  background-color: rgb(223, 55, 55);
+}
+
+.sectionPart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.counter {
+  font-weight: bolder;
+  width: 10%;
+}
+
+.pageBtns {
+  border-top: 2px solid blue;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.qualificationsSection {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+#qualificationType {
+  width: min-content;
+}
+
+/* Assessment */
+.hide {
+  display: none;
+}
+
+.answers {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 10fr 1fr;
+  gap: 1vh;
+  margin: 1vh 0;
+}
+
+.question {
+  border: 1px solid black;    
+  padding: 10px;
+}
+
+.questionText {
+  width: 100%;
+  background-color: #EEE;
+}
+
+#assessment-btn {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#assessment-btn input {
+  width: min-content;
+}

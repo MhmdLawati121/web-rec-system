@@ -1,0 +1,46 @@
+.hr-menus {
+    display: grid;
+    grid-template-areas: 
+    "job task"
+    "app app";
+}
+
+#applications-awaiting-approval {
+    grid-area: app;
+}
+
+#jobs-awaiting-approval {
+    grid-area: job;
+}
+
+#task-awaiting-approval {
+    grid-area: task;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 4px;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+
+.button-right {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2vh;
+}
+
+/* Tasks */
+
+.task-div {
+    background-color: antiquewhite;
+    padding: 3% 5%;
+    margin-top: 1vh; 
+}

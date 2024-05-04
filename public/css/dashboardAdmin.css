@@ -1,0 +1,121 @@
+@import url("./template.css");
+
+.jobPost {
+    padding: 1vh 1vw;
+}
+
+.btn-flex {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.center-div {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.title-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#my-listings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+    width: 100%;
+    margin: 0px 2vw;
+}
+
+#my-listings .title {
+    font-size: 1.2em;
+}
+
+#my-listings .college {
+    font-size: 0.9em;
+}
+
+.action label{
+    background-color: #ffd699;
+    width: 100%;
+    padding: 10px;
+}
+
+.action label:hover {
+    text-decoration: underline;
+}
+
+#dashboard {
+    display: grid;
+    grid-template-areas: 
+    "ac ac ac ac st st st st st"
+    "jl jl jl jl jl sh sh sh sh";
+    gap: 10px;
+    grid-template-columns: repeat(9, 1fr);
+}
+
+.main-content {
+    border-radius: 0px;
+}
+
+#actions-content{
+    grid-area: ac;
+}
+
+#statistics-content{
+    grid-area: st;
+}
+
+#circles{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.circle {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#circle1, #circle2, #circle3 {
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#circle1 {
+    background-color:#ffd699;
+}
+
+
+#circle2 {
+    background-color:#ebcb9c;
+}
+
+
+#circle3 {
+    background-color:#d7a835;
+}
+
+#shared-content{
+    grid-area: sh;
+}
+
+#listings-content {
+    grid-area: jl;
+}
+
+.task-div {
+    background-color: antiquewhite;
+    padding: 3% 5%;
+    margin-top: 1vh; 
+}

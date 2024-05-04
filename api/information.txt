@@ -1,0 +1,17 @@
+skill_requirements_2 = [
+    "Project Management Expertise: The ideal candidate should have extensive experience in project management methodologies, such as Agile and Scrum, demonstrating the ability to lead and deliver successful projects within specified timelines.",
+    "Cloud Computing Proficiency: A strong command of cloud computing platforms, including AWS, Azure, and Google Cloud, is essential. The candidate should be capable of designing, implementing, and optimizing cloud-based solutions to meet business needs.",
+    "Cybersecurity Knowledge: The candidate must possess in-depth knowledge of cybersecurity principles, encompassing skills in configuring firewalls, implementing encryption measures, and effectively detecting and responding to security threats.",
+    "Database Management Skills: Proficiency in managing various databases, including MongoDB, MySQL, and PostgreSQL, is required. The candidate should be adept at designing and maintaining database structures to support the organization's data needs.",
+    "Networking Competence: The candidate should demonstrate a strong understanding of networking concepts, including TCP/IP, DNS, and VPN. Proficiency in configuring and maintaining network infrastructure is crucial for the role.",
+    "Creative Thinking and Innovation: We are seeking individuals who bring a creative mindset to problem-solving and innovation. The ability to think outside the box and propose inventive solutions to challenges is highly valued.",
+    "Adaptability to New Technologies and Tools: The candidate should exhibit a proactive approach to staying current with emerging technologies and tools. The ability to quickly adapt to and leverage new advancements in the field is key to success in this role."
+]
+
+candidate_2_skills = ["Project management: Agile, Scrum",
+                    "Cloud computing: AWS, Azure, Google Cloud",
+                    "Cybersecurity: Firewalls, Encryption, Threat detection",
+                    "Database management: MongoDB, MySQL, PostgreSQL",
+                    "Networking: TCP/IP, DNS, VPN",
+                    "Creative thinking and innovation",
+                    "Adaptability to new technologies and tools"]

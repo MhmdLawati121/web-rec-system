@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recruitment System</title>
+    <!-- Add Bootstrap CSS link here -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/template.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&family=Rubik:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <a class="navbar-brand" href="#">
+        <img
+          class="logo"
+          src="../pictures/SQU_logo.png"
+          alt=""
+          height="50"
+          class="d-inline-block align-text-center"
+        />
+        SQU Careers
+      </a>
+      <button
+        style="border-color: white"
+        class="navbar-toggler custom-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"> </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav custom-nav-item">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About SQU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="location.href='/'">Job Listings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="ml-auto account-buttons">
+          <button
+            type="button"
+            class="btn btn-md custom-btn"
+            style="background-color: #eca400"
+            onclick="location.href = '/login';"
+          >
+            <a style="color: black">login</a>
+          </button>
+          <button
+            type="button"
+            class="btn btn-md custom-btn"
+            style="background-color: #eca400"
+            onclick="location.href = '/registration';"
+          >
+            <a style="color: black">register</a>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="main-content"></div>
+    </div>
+
+    <footer>
+      <div class="custom-footer">
+        <div class="footer-item"><p>@ 2023 SQU Recruitment Sytem</p></div>
+        <div class="footer-item"><p>Terms of Use</p></div>
+      </div>
+    </footer>
+
+    <!-- Add Bootstrap JS and jQuery scripts here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        const documentHeight = document.body.clientHeight;
+        const viewportHeight = window.innerHeight;
+
+        if (documentHeight < viewportHeight) {
+          const footer = document.querySelector(".custom-footer");
+          footer.classList.add("footer-at-bottom");
+        }
+      });
+    </script>
+  </body>
+</html>

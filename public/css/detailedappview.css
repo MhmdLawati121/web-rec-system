@@ -1,0 +1,83 @@
+@import url(./template.css);
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+#comment-section {
+    width: 100%;
+    display: none;
+}
+
+#toggle-comments {
+    cursor: pointer;
+}
+
+.comment {
+    min-height: 100px;
+    display: grid;
+    grid-template-rows: min-content;
+    background-color: aliceblue;
+    border-radius: 12px;
+    padding: 2vh 2vw;
+    word-wrap: break-word; /* For older browsers */
+    overflow-wrap: break-word; /* For newer browsers */
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.comment .heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.comment p {
+    font-size: 0.9rem;
+}
+
+.heading span {
+    flex-grow: 1;
+}
+
+textarea {
+    resize: none; /* Prevent resizing by user */
+    min-height: 50px; /* Set a minimum height */
+    max-height: 200px; /* Set a maximum height if needed */
+    width: 60%;
+}
+
+.avatar {
+    background-color: greenyellow;
+    color: black;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+#comment-anchor {
+    background-color: var(--squ-gold);
+    margin-bottom: 2vh;
+    padding: 1%;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+
+#comment-anchor a {
+    text-align: center;
+}

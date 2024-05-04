@@ -1,0 +1,68 @@
+@import url('./template.css');
+
+.login-container {
+    width: 20vw;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  .login-container h2 {
+    text-align: center;
+    margin-bottom: 7vh;
+  }
+  
+  .login-container form {
+    margin-bottom: 20px;
+  }
+  
+  .login-container input[type="text"],
+  .login-container input[type="password"],
+  .login-container button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 7vh;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* Add margin-bottom to inputs */
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    font-size: 16px;
+    margin-bottom: 3vh; /* Add space between inputs and other sections */
+  }
+  
+  .login-container button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .login-container button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  #message {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .login-container p {
+    text-align: center;
+  }
+  
+  .login-container p a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .login-container p a:hover {
+    text-decoration: underline;
+  }
+  

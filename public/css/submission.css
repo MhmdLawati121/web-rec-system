@@ -1,0 +1,99 @@
+@import url("template.css");
+
+.main-content {
+  display: grid;
+  /* grid-template-columns: 2fr 1fr; */
+  grid-template-rows: min-content 1fr;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  gap: 10px;
+  height: 100%;
+}
+
+section {
+  padding: 30px;
+  height: 90%;
+  width: 100%;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: inherit;
+  align-items: center;
+}
+
+.progress ul {
+  width: 75%;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress i {
+  width: 35px;
+  height: 35px;
+}
+
+.progress section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  border-bottom: #eca400 solid 1px;
+}
+
+.progress section button{
+  background-color: #eca400;
+  border: none;
+  border-radius: 5px;
+  padding: 2%;
+  
+}
+
+.appForm input,
+select {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+textarea {
+  display: block;
+}
+
+.options {
+  font-weight: 1;
+}
+
+ul {
+  list-style: none;
+  font-size: 1.2rem;
+  line-height: 3.5rem;
+  padding: 0px;
+  cursor: pointer;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}

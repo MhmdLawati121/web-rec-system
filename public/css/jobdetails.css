@@ -1,0 +1,31 @@
+@import url("template.css");
+
+.delete {
+  background-color: #ec0000;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  margin-left: 60%;
+}
+
+.maint {
+  width: 35%;
+}
+
+.tatr {
+  width: 90%;
+}
+
+.maint {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.req {
+  padding-top: 5%;
+}
+
+.tlist {
+  list-style-type: circle;
+  font-size: 18px;
+}
